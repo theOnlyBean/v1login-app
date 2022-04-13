@@ -1,0 +1,486 @@
+<head>
+  <title>Home | Beanboy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<div class="loader" id="loader">
+
+  <img src="https://cdn.dribbble.com/users/1186261/screenshots/3718681/_______.gif">
+
+</div>
+
+<div class="nav">
+<ul>
+    <li><a class="logout" href="/logout">Logout</a></li>
+    <li class="skills"><a>Skills</a></li>
+    <li class="about"><a>About</a></li>
+    <li class="home"><a class="act">Home</a></li>
+    <li class="company"><a href="/" class="ACo">Beanboy</a></li>
+</ul>
+</div>
+
+<div class="container">
+
+  <form id="feedbackFrom" class="gform pure-form pure-form-stacked" method="POST" data-email="bjjuten@gmail.com"
+  action="https://script.google.com/macros/s/AKfycbwiantMVL-nVsZNj0JHeG-1KVRySJS9RX__bGPW/exec">
+
+    <div class="formCon">
+      <div class="progress">
+
+        <div class="bullet bullet1" id="bullet">1</div>
+        <div class="step step1" id="step1"></div>
+        <div class="bullet bullet2" id="bullet2">2</div>
+        <div class="step step2" id="step2"></div>
+        <div class="bullet bullet3" id="bullet3">3</div>
+
+      </div>
+
+      <div class="opinionDiv" id="opinionDiv">
+        <img onclick="terrible()" src="emojis/terrible.png">
+        <img onclick="bad()" src="emojis/bad.png">
+        <img onclick="ok()" src="emojis/ok.png">
+        <img onclick="good()" src="emojis/good.png">
+        <img onclick="great()" src="emojis/great.png">
+      </div>
+
+      <h1 class="formTitle" id="formTitle">Feedback</h1>
+
+      <textarea class="message" id="message" name="message" placeholder="Message"  autofocus></textarea>
+
+      <input class="email" id="email" type="email" name="email" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Email">
+
+      <input class="opinion" id="opinion" type="text" name="opinion" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+
+      <button class="submitBTN" id="submitBTN">Submit</button>
+
+      <div class="thankyou" id="thankyou">
+
+      <h1>Thankyou for your Feedback</h1>
+      <p>this is super useful for making our website better</p>
+
+      <button onclick="location.href='/';">Back</button>
+
+    </div>
+
+    </div>
+
+  </form>
+
+  <script data-cfasync="false" type="text/javascript"
+  src="form-submission-handler.js"></script>
+
+</div>
+
+<style>
+
+body{
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    float: right;
+    margin-right: 5vw;
+    margin-top: 2vh;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav{
+    width: 100%;
+    height: 10vh;
+    border-bottom: 2px solid whitesmoke;
+    position: absolute;
+    background: white;
+    border-bottom-right-radius: 20px;
+}
+
+.skills{
+    margin-right: 5vw;
+}
+
+.about{
+    margin-right: 4vw;
+}
+
+.home{
+    margin-right: 4vw;
+}
+
+.act{
+    color: blue;
+}
+
+a{
+    color: grey;
+    font-family: "Calibri";
+    text-decoration: none;
+    font-size: 2.2vh;
+}
+
+.company{
+    float: left;
+    margin-left: 7vw;
+}
+
+.ACo{
+    color: rgb(138, 138, 138);
+    font-weight: bold;
+}
+
+.skills:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: blue;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.skills:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.about:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: blue;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.about:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.logout{
+  position: relative;
+  border: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 2.5vh;
+  font-family: "Calibri";
+  border-radius: 100px;
+  text-decoration: none;
+}
+
+.container{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -20;
+}
+
+.formCon{
+  width: 40vw;
+  height: 60vh;
+  background: whitesmoke;
+  box-shadow: 0px 0px 70px rgb(201, 201, 201);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.message::placeholder {
+  color: rgb(163, 163, 163);  
+}
+
+.message{
+  outline: none;
+  resize: none;
+  border: 0px;
+  background: white;
+  font-family: Calibri;
+  font-size: 20px;
+  height: 30%;
+  width: 50%;
+  box-shadow: 0px 0px 50px rgb(238, 237, 237);
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 10vh;
+}
+
+.email{
+  outline: none;
+  display: none;
+  border: 0px;
+  background: white;
+  font-family: Calibri;
+  font-size: 20px;
+  height: 3%;
+  width: 50%;
+  box-shadow: 0px 0px 50px rgb(238, 237, 237);
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 10vh;
+}
+
+.opinion{
+  outline: none;
+  display: none;
+}
+
+.progress{
+  position: absolute;
+  background: transparent;
+  width: 30%;
+  height: 10%;
+  top: 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bullet{
+  color: white;
+  font-size: 20px;
+  background: rgb(255, 0, 85);
+  border-radius: 100px;
+  width: 5vh;
+  height: 3.75vh;
+  text-align: center;
+  padding-top: 1.25vh;
+  font-family: Calibri;
+}
+
+.formTitle{
+  font-family: Calibri;
+  position: absolute;
+  color: rgb(255, 0, 85);
+  top: 34%;
+}
+
+.step{
+  width: 5vw;
+  height: 0.5vh;
+  background: rgb(255, 0, 85);
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+
+.step1{
+  background: lightgrey;
+}
+
+.step2{
+  background: lightgrey;
+}
+
+.bullet2{
+  background: lightgrey;
+}
+
+.bullet3{
+  background: lightgrey;
+}
+
+.opinionDiv{
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  bottom: 40%;
+}
+
+.submitBTN{
+  display: none;
+}
+
+.opinionDiv img{
+  margin: .5vw;
+  height: 8vh;
+  width: 8vh;
+  opacity: 1;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.opinionDiv img:hover{
+  opacity: 0.75;
+}
+
+.thankyou{
+  display: none;
+  position: absolute;
+  font-family: Calibri;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.thankyou p{
+  font-size: 17px;
+  color: grey;
+  position: absolute;
+  bottom: 30%;
+}
+
+.thankyou button{
+  border: 2px solid blue;
+  background: blue;
+  height: 5vh;
+  width: 7vw;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 15%;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.thankyou button:hover{
+  background: transparent;
+  color: blue;
+}
+
+.loader{
+  position: absolute;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+@keyframes loadFadeOut{
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+</style>
+<script>
+
+var inputMessage = document.getElementById("message");
+var inputEmail = document.getElementById("email");
+var opinionInput = document.getElementById("opinion");
+var formtitle = document.getElementById("formTitle");
+var Bullet = document.getElementById("bullet");
+var Step1 = document.getElementById("step1");
+var Bullet2 = document.getElementById("bullet2");
+var Step2 = document.getElementById("step2");
+var Bullet3 = document.getElementById("bullet3");
+
+var step = 0;
+
+document.getElementById("submitBTN").disabled = true;
+
+inputMessage.addEventListener("keyup", function(event) {
+
+  if (event.keyCode === 13 && step == 0) {
+    event.preventDefault();
+    inputMessage.style.display = "none";
+    formtitle.innerHTML = "Email";
+    Bullet.innerHTML = "✔";
+    Bullet.style.paddingTop = ".8vh";
+    Bullet.style.height = "4vh";
+    Step1.style.background = "rgb(255, 0, 85)";
+    Bullet2.style.background = "rgb(255, 0, 85)";
+    inputEmail.style.display = "flex";
+    inputEmail.focus();
+    step = 1;
+  }
+});
+
+inputEmail.addEventListener("keyup", function(event) {
+
+if (event.keyCode === 13 && step == 1){
+    event.preventDefault();
+    inputEmail.style.display = "none";
+    formtitle.innerHTML = "How was your Experience";
+    Bullet2.innerHTML = "✔";
+    Bullet2.style.paddingTop = ".8vh";
+    Bullet2.style.height = "4vh";
+    Step2.style.background = "rgb(255, 0, 85)";
+    Bullet3.style.background = "rgb(255, 0, 85)";
+    document.getElementById("opinionDiv").style.display = "flex";
+    document.getElementById("submitBTN").disabled = false;
+  }
+
+});
+
+function terrible(){
+  opinionInput.value = "terrible";
+  document.getElementById("submitBTN").click();
+  donefeedback();
+}
+
+function bad(){
+  opinionInput.value = "bad";
+  document.getElementById("submitBTN").click();
+  donefeedback();
+}
+
+function ok(){
+  opinionInput.value = "ok";
+  document.getElementById("submitBTN").click();
+  donefeedback();
+}
+
+function good(){
+  opinionInput.value = "good";
+  document.getElementById("submitBTN").click();
+  donefeedback();
+}
+
+function great(){
+  opinionInput.value = "great";
+  document.getElementById("submitBTN").click();
+  donefeedback();
+}
+
+function donefeedback(){
+  document.getElementById("opinionDiv").style.display = "none";
+  formtitle.innerHTML = "";
+  Bullet3.innerHTML = "✔";
+  Bullet3.style.paddingTop = ".8vh";
+  Bullet3.style.height = "4vh";
+  document.getElementById("thankyou").style.display = "flex";
+}
+
+
+// loader script
+
+window.addEventListener("load", function(){
+  setTimeout(function(){
+    document.getElementById("loader").style.animation = "loadFadeOut 0.5s linear";
+    setTimeout(function(){ document.getElementById("loader").style.display = "none"; }, 500)
+  }, 1000)
+});
+</script>

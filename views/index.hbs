@@ -1,0 +1,237 @@
+<div class="home">
+    <!DOCTYPE html>
+<head>
+  <title>Home | Beanboy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body id="theBody">
+  <div class="header">
+    <h1 class="title">Hi, <br> I'm <span class="name"> Ben </span> <br> I'm a <span class="desc">Web Designer</span></h1>
+    <button class="contact" onclick="contact()">Contact</button>
+  </div>
+  <div class="MBCover" id="MBCover"></div>
+
+<div class="nav">
+<ul>
+    <li><a class="logout" href="/logout">Logout</a></li>
+    <li class="skills"><a>Skills</a></li>
+    <li class="about"><a href="/about">About</a></li>
+    <li class="home"><a class="act">Home</a></li>
+    <li class="company"><a href="/" class="ACo">Beanboy</a></li>
+</ul>
+</div>
+<style>
+
+body{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    background-image: url("wave-haikei.svg");
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-size: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+   
+ul{
+    list-style-type: none;
+}
+
+li{
+    float: right;
+    margin-right: 5vw;
+    margin-top: 2vh;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav{
+    width: 100%;
+    height: 10vh;
+    border-bottom: 2px solid whitesmoke;
+    position: absolute;
+    background: white;
+    border-bottom-right-radius: 20px;
+}
+
+.skills{
+    margin-right: 5vw;
+}
+
+.about{
+    margin-right: 4vw;
+}
+
+.home{
+    margin-right: 4vw;
+}
+
+.act{
+    color: blue;
+}
+
+a{
+    color: grey;
+    font-family: "Calibri";
+    text-decoration: none;
+    font-size: 2.2vh;
+}
+
+.company{
+    float: left;
+    margin-left: 7vw;
+}
+
+.ACo{
+    color: rgb(138, 138, 138);
+    font-weight: bold;
+}
+
+.skills:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: blue;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.skills:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.about:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: blue;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.about:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.logout{
+  position: relative;
+  border: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 2.5vh;
+  font-family: "Calibri";
+  border-radius: 100px;
+  text-decoration: none;
+}
+    
+.header{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    
+.title{
+  font-family: "Calibri";
+  font-size: 10.75vh;
+  position: absolute;
+  top: 20vh;
+  right: 50vw;
+}
+
+.name{
+    color: rgb(0, 110, 255);
+}
+
+.desc{
+    background: -webkit-linear-gradient(45deg, red, rgb(182, 0, 182));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+    
+.contact{
+    position: absolute;
+    top: 73vh;
+    left: 25vw;
+    border: 2px solid rgb(255, 0, 85);
+    background: rgb(255, 0, 85);
+    color:  white;
+    cursor: pointer;
+    padding: 13px;
+    padding-right: 35px;
+    padding-left: 35px;
+    font-size: 1.8vh;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: inset 0px 0px 0px rgb(255, 147, 183);
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.contact:hover{
+    background: transparent;
+    color: rgb(255, 0, 85);
+}
+
+.MBCover{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 0px;
+    background: #0066FF;
+}
+
+@keyframes moveBackground{
+    from {background-position-x: -0px;}
+
+    to{background-position-x: -100vw;}
+}
+
+@keyframes MBCoverMove{
+    from {width: 0px;}
+
+    to {width: 100vw;}
+}
+
+</style>   
+<script>
+
+function contact(){/*
+    document.getElementById("theBody").style.animation = "moveBackground 2s ease";
+    document.getElementById("MBCover").style.animation = "MBCoverMove 2s ease";*/
+
+    /*setTimeout(function(){ */location.href = "contact"; /*}, 1800)*/
+    
+}
+
+</script>
+</body>
+</div>

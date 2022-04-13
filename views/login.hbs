@@ -1,0 +1,68 @@
+    <link rel="stylesheet" href="style.css" />
+    <div class="container">
+        <form class="form" action="/login" method="post" id="login">
+            <h1 class="title">Login</h1>
+
+            <div class="EmailContainer">
+                <input type="text" name="username" class="email" id="email" onkeyup="CheckEmail()" style="text-transform:lowercase" required autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                <div class="email-underline"></div>
+                <label class="email-label">Email</label>
+                <p id="email-error" class="email-error">Enter an Email</p>
+            </div>
+            
+            <div class="PassContainer">
+                <input type="password" name="password" class="pass" id="pass" onkeyup="CheckPass()" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                <label class="pass-label">Password</label>
+                <div class="pass-underline"></div>
+                <p id="pass-error" class="pass-error">Enter a Password</p>
+            </div>
+            
+            {{#if error}}
+            <p id="main-error" class="main-error">Incorrect email or password</p>
+            {{/if }}
+            <button class="submit" onclick="LoginSubmit()" id="loginSubmit">Submit</button>
+            <div class="disableSubmit" onclick="LoginSubmit()" id="disableSubmit"></div>
+        </form>
+        <button class="forgot" id="forgotBtn" onclick="ToForgot()">Forgot Something?</button>
+        <form class="form--hidden" action="/signup" method="post" id="signup">
+            <h1 class="title">Sign Up</h1>
+
+            <div class="EmailContainer">
+                <input type="text" class="email form_data" id="signup-email" name="username" onkeyup="CheckSignupEmail()" style="text-transform:lowercase" required autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                <div class="email-underline"></div>
+                <label class="email-label">Email</label>
+                <p id="signup-email-error" class="signup-email-error">Enter an Email</p>
+            </div>
+            
+            <div class="Pass1Container">
+                <input type="text" class="pass1 form_data" id="pass1" name="password" onkeyup="CheckPass1()"  required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                <label class="pass-label1">Password</label>
+                <div class="pass-underline1"></div>
+                <p id="signup-pass-error1" class="signup-pass-error1">Enter a Password</p>
+            </div>
+            
+            <div class="Pass2Container">
+                <input type="password" class="pass2 form_data" id="pass2" onkeyup="CheckPass2()" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                <label class="pass-label2">Confirm Password</label>
+                <div class="pass-underline2"></div>
+                <p id="signup-pass-error2" class="signup-pass-error2">Enter a Password</p>
+            </div>
+
+            <p class="signupMessage" id="signupMessage"></p>
+            <input type="submit" class="submit">
+            <div class="disableRegister" onclick="LoginSubmit()" id="disableRegister"></div>
+            <p class="Login-SignupText" onclick="ToLogin()">Already have an account? <a class="Login-SignupLink">Login</a></p>
+        </form>
+
+        <div class="forgotScreen form--hidden" id="forgot">
+
+          <button class="forgotPass" onmouseover="FPass()" onmouseout="DFPass()" onclick="location.href='/forgotpass';"></button>
+          <button class="forgotUser" onmouseover="FUser()" onmouseout="DFUser()"></button>
+
+          <p class="verifyText" id="verifyText">Forgot password?</p>
+
+          <p class="Login-SignupText" onclick="ToSignup()">Don't have an account? <a class="Login-SignupLink">Sign Up</a></p>
+
+        </div>
+    </div>
+    <script src="script.js"></script>

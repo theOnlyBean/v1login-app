@@ -1,0 +1,585 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background-image: url("background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.container{
+  background: whitesmoke;
+  height: 80vh;
+  width: 60vh;
+  position: relative;
+  top: 10vh;
+  right: 5vw;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 50px grey;
+  
+}
+
+.title{
+  font-size: 3.3vh;
+  font-family: "Calibri";
+  position: absolute;
+  bottom: 64vh;
+}
+
+.Login-SignupText{
+  font-family: "Calibri";
+  font-size: 18px;
+  color: grey;
+  position: absolute;
+  top: 68vh;
+  z-index: 20;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.Login-SignupLink{
+  color: #0055ff;
+  font-weight: bolder;
+  cursor: pointer;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.form--hidden{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+input{
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid silver;
+  font-family: "Calibri";
+  font-size: 20px;
+  outline: none;
+  position: absolute;
+  width: 100%;
+  pointer-events: auto;
+}
+
+.EmailContainer{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 52vh;
+  width: 60%;
+}
+
+.PassContainer{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 37vh;
+  width: 60%;
+}
+
+.Pass1Container{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 41vh;
+  width: 60%;
+}
+
+.Pass2Container{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 28vh;
+  width: 60%;
+}
+
+.email-label{
+  position: relative;
+  color: grey;
+  font-size: 2.2vh;
+  font-family: "Calibri";
+  right: 43%;
+  bottom: 0.8vh;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.email:focus ~ .email-label,
+.email:valid ~ .email-label{
+  transform: translateY(-20px);
+  font-size: 18px;
+  color: #0055ff;
+}
+
+.email-underline{
+  position: absolute;
+  height: 2px;
+  bottom: -2px;
+  width: 102%;
+}
+
+.email-underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #0055ff;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.email:focus ~ .email-underline:before,
+.email:valid ~ .email-underline:before{
+  transform: scaleX(1);
+}
+
+.pass-label{
+  position: relative;
+  bottom: 0.8vh;
+  color: grey;
+  font-size: 2.2vh;
+  font-family: "Calibri";
+  right: 38%;
+  bottom: 0.8vh;
+  transition: all 0.3s ease;
+}
+
+.pass:focus ~ .pass-label,
+.pass:valid ~ .pass-label{
+  transform: translateY(-20px);
+  font-size: 18px;
+  color: #0055ff;
+}
+
+.pass-underline{
+  position: absolute;
+  height: 2px;
+  bottom: -2px;
+  width: 102%;
+}
+
+.pass-underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #0055ff;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.pass:focus ~ .pass-underline:before,
+.pass:valid ~ .pass-underline:before{
+  transform: scaleX(1);
+}
+
+.pass-label1{
+  position: relative;
+  bottom: 42vh;
+  color: grey;
+  font-size: 2.2vh;
+  font-family: "Calibri";
+  right: 38%;
+  bottom: 0.8vh;
+  transition: all 0.3s ease;
+}
+
+.pass1:focus ~ .pass-label1,
+.pass1:valid ~ .pass-label1{
+  transform: translateY(-20px);
+  font-size: 19px;
+  color: #0055ff;
+}
+
+.pass-underline1{
+  position: absolute;
+  height: 2px;
+  bottom: -2px;
+  width: 102%;
+}
+
+.pass-underline1:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #0055ff;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.pass1:focus ~ .pass-underline1:before,
+.pass1:valid ~ .pass-underline1:before{
+  transform: scaleX(1);
+}
+
+.pass-label2{
+  position: relative;
+  bottom: 29vh;
+  color: grey;
+  font-size: 2.2vh;
+  font-family: "Calibri";
+  right: 27%;
+  bottom: 0.8vh;
+  transition: all 0.3s ease;
+}
+
+.pass2:focus ~ .pass-label2,
+.pass2:valid ~ .pass-label2{
+  transform: translateY(-20px);
+  font-size: 19px;
+  color: #0055ff;
+}
+
+.pass-underline2{
+  position: absolute;
+  height: 2px;
+  bottom: -2px;
+  width: 102%;
+}
+
+.pass-underline2:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #0055ff;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.pass2:focus ~ .pass-underline2:before,
+.pass2:valid ~ .pass-underline2:before{
+  transform: scaleX(1);
+}
+
+.forgot{
+  border-radius: 10px;
+  background: #0055ff;
+  color: white;
+  font-family: "Calibri";
+  font-size: 1.5vh;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 53vh;
+  padding: 1.2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 300ms;
+  display: flex;
+}
+
+.forgot--hidden{
+  border-radius: 10px;
+  background: #0055ff;
+  color: white;
+  font-family: "Calibri";
+  font-size: 1.5vh;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 53vh;
+  padding: 1.2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 300ms;
+  display: none;
+}
+
+.submit{
+  border-radius: 20px;
+  background: #0055ff;
+  color: white;
+  font-family: "Calibri";
+  font-weight: 900;
+  font-size: 3vh;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 62vh;
+  height: 8.5%;
+  width: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 300ms;
+  text-align: center;
+}
+
+.disableSubmit{
+  border-radius: 20px;
+  background: white;
+  opacity: 0.75;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 62vh;
+  height: 8.5%;
+  width: 50%;
+  cursor: default;
+  pointer-events: auto;
+}
+
+.disableRegister{
+  border-radius: 20px;
+  background: white;
+  opacity: 0.75;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 62vh;
+  height: 8.5%;
+  width: 50%;
+  cursor: default;
+  pointer-events: auto;
+}
+
+.forgot:hover{
+  opacity: 0.8;
+}
+
+.forgot:active{
+  opacity: 0.6;
+}
+
+.submit:hover{
+  opacity: 0.8;
+}
+
+.submit:active{
+  opacity: 0.6;
+}
+
+.email-error{
+  color: red;
+  font-family: "Calibri";
+  font-size: 1.5vh;
+  position: absolute;
+  bottom: -5vh;
+  font-weight: 550;
+}
+
+.pass-error{
+  color: red;
+  font-family: "Calibri";
+  font-size: 1.5vh;
+  position: absolute;
+  bottom: -5vh;
+  font-weight: 550;
+}
+
+.main-error{
+  color: red;
+  font-family: "Calibri";
+  font-size: 2vh;
+  position: absolute;
+  bottom: 5vh;
+  font-weight: 550;
+}
+
+.signup-email-error{
+  color: red;
+  font-family: "Calibri";
+  font-size: 1.5vh;
+  position: absolute;
+  bottom: -5vh;
+  font-weight: 550;
+}
+
+.signup-pass-error1{
+  color: red;
+  font-family: "Calibri";
+  font-size: 1.5vh;
+  position: absolute;
+  bottom: -5vh;
+  font-weight: 550;
+}
+
+.signup-pass-error2{
+  color: red;
+  font-family: "Calibri"; 
+  font-size: 1.5vh;
+  position: absolute;
+  bottom: -5vh;
+  font-weight: 550;
+}
+
+.signupMessage{
+  color: #32a852;
+  font-family: "Calibri";
+  font-size: 3vh;
+  position: absolute;
+  bottom: 18vh;
+  font-weight: 999;
+}
+
+.forgotScreen{
+  font-family: "Calibri";
+}
+
+.forgotPass{
+  background-image: url("pass.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 0px 20px 20px lightgrey;
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 300ms;
+}
+
+.forgotPass:hover{
+  box-shadow: 0px 20px 20px grey;
+  opacity: 0.75;
+  transform: translateY(-20px);
+}
+
+.forgotUser{
+  background-image: url("user.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 0px 20px 20px lightgrey;
+  position: absolute;
+  top: 300px;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 300ms;
+}
+
+.forgotUser:hover{
+  box-shadow: 0px 20px 20px grey;
+  opacity: 0.75;
+  transform: translateY(-20px);
+}
+
+.verifyText{
+  font-size: 3vh;
+  color: silver;
+  position: absolute;
+  bottom: 150px;
+  opacity: 0;
+  font-family: "Calibri";
+}
+
+.toSignup{
+  background-image: url("user.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 0px 20px 20px lightgrey;
+  position: absolute;
+  top: 300px;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 300ms;
+}
+
+.toSignup:hover{
+  box-shadow: 0px 20px 20px grey;
+  opacity: 0.75;
+  transform: translateY(-20px);
+}
+
+.home{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes FPassAnim{
+
+  from{opacity: 0;}
+
+  to{opacity: 1;}
+
+}
+
+@keyframes DFPassAnim{
+
+  from{opacity: 1;}
+
+  to{opacity: 0;}
+
+}
+
+@keyframes FUserAnim{
+
+  from{opacity: 0;}
+
+  to{opacity: 1;}
+
+}
+
+@keyframes DFUserAnim{
+
+  from{opacity: 1;}
+
+  to{opacity: 0;}
+
+}
+
+@keyframes disableDisable{
+
+  from{opacity: 0.75;}
+
+  to{opacity: 0;}
+
+}
+
+@keyframes enableDisable{
+
+  from{opacity: 0;}
+
+  to{opacity: 0.75;}
+
+}
